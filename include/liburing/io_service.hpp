@@ -20,8 +20,10 @@
 #   define puts_if_verbose(x) puts(x)
 #   define printf_if_verbose(...) printf(__VA_ARGS__)
 #else
-#   define puts_if_verbose(x) 0
-#   define printf_if_verbose(...) 0
+// #   define puts_if_verbose(x) 0
+// #   define printf_if_verbose(...) 0
+#   define puts_if_verbose(x) do {} while(0)
+#   define printf_if_verbose(...) do {} while(0)
 #endif
 
 namespace uio {
