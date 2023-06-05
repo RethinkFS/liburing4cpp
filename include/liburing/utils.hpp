@@ -40,7 +40,7 @@ constexpr inline __kernel_timespec dur2ts(std::chrono::nanoseconds dur) noexcept
  * @return never
  */
 [[noreturn]]
-void panic(std::string_view sv, int err) {
+inline void panic(std::string_view sv, int err) {
 #ifndef NDEBUG
     // https://stackoverflow.com/questions/77005/how-to-automatically-generate-a-stacktrace-when-my-program-crashes
     void *array[32];
